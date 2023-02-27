@@ -22,7 +22,7 @@ def pregunta_01():
   40
 
   """
-  respuesta = tbl0.shape[0]
+  respuesta = len(tbl0)
   return respuesta
 
 # print(pregunta_01())
@@ -36,7 +36,7 @@ def pregunta_02():
   4
 
   """
-  respuesta = tbl0.shape[1]
+  respuesta = tbl0.shape
   return respuesta
 
 # print(pregunta_02())
@@ -56,7 +56,7 @@ def pregunta_03():
     Name: _c1, dtype: int64
 
     """
-    respuesta = tbl0.groupby('_c1').size()
+    respuesta = tbl0.groupby('_c1')['_c1'].count()
     return respuesta
 
 # print(pregunta_03())
@@ -74,7 +74,7 @@ def pregunta_04():
     E    4.785714
     Name: _c2, dtype: float64
     """
-    respuesta = tbl0.groupby('_c1').mean()['_c2']
+    respuesta = tbl0.groupby('_c1')['_c2'].mean()
     return respuesta
 
 # print(pregunta_04())
@@ -94,7 +94,7 @@ def pregunta_05():
     E    9
     Name: _c2, dtype: int64
     """
-    respuesta = tbl0.groupby('_c1').max()['_c2']
+    respuesta = tbl0.groupby('_c1')['_c2'].max()
     return respuesta
 
 # print(pregunta_05())
